@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 
 const useMessage = () => {

@@ -18,7 +18,7 @@ routerLink.post(
             const code = shortid.generate();
 
             // Add await here to wait for the database query
-            const existing = await Link.findOne({ from });
+            const existing = await Link.findOne({ from, owner: req.user.userId });
 
             if (existing) {
                 console.log('Existing link found');

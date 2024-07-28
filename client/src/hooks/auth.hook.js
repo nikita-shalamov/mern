@@ -27,10 +27,8 @@ const useAuth = () => {
 
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem(storageName))
-        console.log('data and data.token not if', data['token']);
         
         if (data && data.token) {
-            console.log('data and data.token', data);
             login(data.token, data.userId)
         }
 

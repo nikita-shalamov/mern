@@ -10,7 +10,6 @@ import Loader from './components/Loader';
 function App() {
 	const {token, login, logout, userId, ready} = useAuth()
 	const isAuthenticated = !!token
-	console.log(localStorage.getItem('userData'));
 	const routes = useRoutes(isAuthenticated)
 
 	if (!ready) {

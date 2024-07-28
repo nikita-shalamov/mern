@@ -42,6 +42,7 @@ const AuthPage = () => {
         try {
             const data = await request('/api/auth/login', 'POST', {...form});
             auth.login(data.token, data.userId)
+            console.log('auth.login', auth.login());
         } catch (e) {
             // Ошибка будет обработана и отображена через useMessage
         }
